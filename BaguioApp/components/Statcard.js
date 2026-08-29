@@ -1,29 +1,36 @@
-import {StyleSheet, Text, View } from 'react-native';
-export default function StatCard(props)
-{
+import { StyleSheet, Text, View} from 'react-native';
+
+export default function StatCard(props) {
     return(
-        <view style={[styles.card, {backgroundcolor: props.bgColor }]}>
-            <Text style={styles.title}>{props.title} </Text>
+        <View style= {[styles.card, {backgroundColor: props.bgColor}]}>
+            <Text style={styles.title}>{props.title}</Text>
             <Text style={styles.value}>{props.value}</Text>
-        </view>
+        </View>
     );
 }
-    const styles =StyleSheet.create({
-        card: {
-            padding: 20,
-            borderRadius: 12,
-            marginVertical: 10,
-            width: '100',
-        },
-        title: {
-            fontSize: 16,
-            color: '#ffffff',
-            fontWeight: '600',
-        },
-        value: {
-            fontSize: 28,
-            color: '#ffffff',
-            fontWeight: 'bold',
-            marginTop: 5,
-        },
-    });
+
+const styles= StyleSheet.create({
+    card: {
+        padding: 30,
+        borderRadius: 30,
+        marginVertical: 10,
+        width: '100%',
+        borderWidth: 5,
+        borderColor: '#b010c25e',
+    },
+
+    title: {
+    fontSize: 16,
+    color: '#ffffff',
+    fontWeight: '600',
+    color: "#000000"
+    },
+
+    value: {
+        fontSize: 28,
+        color: '#ffffff',
+        fontWeight: 'bold',
+        marginTop: 5,
+        color: "#000000"
+    },
+});
